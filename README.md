@@ -97,7 +97,6 @@ Vercel is configured via `vercel.json`:
 │   │   └── ...
 │   └── index.html
 ├── server/           # Express server (optional, not needed for Vercel)
-├── shared/           # Shared constants and utilities
 ├── dist/             # Build output
 └── vercel.json       # Vercel configuration
 ```
