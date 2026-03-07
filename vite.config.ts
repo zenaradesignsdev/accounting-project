@@ -60,6 +60,17 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    sourcemap: false,
+    minify: "esbuild",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          router: ["wouter"],
+          ui: ["@radix-ui/react-dialog", "@radix-ui/react-select"],
+        },
+      },
+    },
   },
   server: {
     port: 3000,

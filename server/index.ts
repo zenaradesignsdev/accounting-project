@@ -26,7 +26,11 @@ async function startServer() {
   const port = process.env.PORT || 3000;
 
   server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    if (process.env.NODE_ENV === "production") {
+      console.log(`Server running on port ${port}`);
+    } else {
+      console.log(`Server running on http://localhost:${port}/`);
+    }
   });
 }
 
