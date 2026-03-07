@@ -15,7 +15,7 @@ const partners = [
     credentials: "CPA, MST",
     title: "Managing Partner",
     specialty: "Tax Strategy & Business Advisory",
-    bio: "Strategic tax planning specialist with 15+ years advising high-growth businesses and entrepreneurs. Michael has helped clients collectively save over $40M in tax liability through proactive planning and deep regulatory expertise.",
+    bio: "Strategic tax planning specialist with 15+ years advising high-growth businesses and entrepreneurs. Michael has helped clients collectively save over $85K in tax liability through proactive planning and deep regulatory expertise.",
     photo: MICHAEL_IMG,
     highlights: ["IRS Enrolled Agent", "Big 4 Alumni", "Forbes 30 Under 30"],
   },

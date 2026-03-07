@@ -27,14 +27,14 @@ function useCountUp(target: number, duration = 2000, isVisible = false) {
 }
 
 const stats = [
-  { prefix: "$", value: 2.4, suffix: "B+", label: "Total Assets Managed", isDecimal: true },
-  { prefix: "", value: 500, suffix: "+", label: "Business Clients Served", isDecimal: false },
-  { prefix: "$", value: 40, suffix: "M+", label: "Tax Savings Delivered", isDecimal: false },
+  { prefix: "$", value: 65, suffix: "M+", label: "Total Assets Managed", isDecimal: false },
+  { prefix: "", value: 85, suffix: "+", label: "Business Clients Served", isDecimal: false },
+  { prefix: "$", value: 85, suffix: "K+", label: "Tax Savings Delivered", isDecimal: false },
   { prefix: "", value: 98, suffix: "%", label: "Client Retention Rate", isDecimal: false },
 ];
 
 function StatItem({ stat, isVisible, index }: { stat: typeof stats[0]; isVisible: boolean; index: number }) {
-  const count = useCountUp(stat.isDecimal ? 24 : stat.value, 2200, isVisible);
+  const count = useCountUp(stat.isDecimal ? Math.round(stat.value * 10) : stat.value, 2200, isVisible);
 
   return (
     <div

@@ -19,7 +19,7 @@ export default function Footer() {
                 Ready to gain financial clarity?
               </h3>
               <p className="font-heading text-sm text-white/40">
-                Join 500+ businesses that trust North Ledger Advisory.
+                Join 85+ businesses that trust North Ledger Advisory.
               </p>
             </div>
             <a

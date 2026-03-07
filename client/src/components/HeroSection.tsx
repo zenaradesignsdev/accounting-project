@@ -4,7 +4,7 @@
  * Full-bleed dark hero with compass rose background, animated headline, dual CTAs
  */
 import { useEffect, useRef } from "react";
-import { ArrowRight, TrendingUp, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663409971799/2d8awCJtCFvfTRMPDXJEDN/nla-hero-bg-aFYpspLvn7y5MrdeB8je6Z.webp";
 
@@ -23,12 +23,6 @@ export default function HeroSection() {
       }, delay);
     });
   }, []);
-
-  const stats = [
-    { icon: TrendingUp, value: "$2.4B+", label: "Assets Managed" },
-    { icon: Shield, value: "500+", label: "Clients Served" },
-    { icon: BarChart3, value: "15+", label: "Years of Excellence" },
-  ];
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0F1E2E]">
@@ -64,7 +58,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/3 right-12 lg:right-24 hidden lg:block z-10">
         <div className="glass-card rounded-lg p-4 w-44 animate-pulse-slow" style={{ animationDelay: '2s' }}>
           <div className="text-xs text-white/40 font-heading uppercase tracking-wider mb-1">Tax Savings</div>
-          <div className="text-xl font-heading font-700 text-[#D4AF37]">$340K</div>
+          <div className="text-xl font-heading font-700 text-[#D4AF37]">$85K</div>
           <div className="text-xs text-white/40 font-heading">This fiscal year</div>
         </div>
       </div>
@@ -115,21 +109,6 @@ export default function HeroSection() {
             >
               View Services
             </a>
-          </div>
-
-          {/* Stats row */}
-          <div className="flex flex-wrap gap-8 fade-up visible" style={{ transitionDelay: "800ms" }}>
-            {stats.map(({ icon: Icon, value, label }) => (
-              <div key={label} className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-sm bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center">
-                  <Icon size={16} className="text-[#D4AF37]" />
-                </div>
-                <div>
-                  <div className="font-heading text-xl font-700 text-white">{value}</div>
-                  <div className="font-heading text-xs text-white/40 uppercase tracking-wider">{label}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
