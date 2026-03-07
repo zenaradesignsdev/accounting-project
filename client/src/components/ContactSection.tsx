@@ -20,6 +20,15 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Clear the form
+    setForm({
+      name: "",
+      email: "",
+      company: "",
+      service: "",
+      message: "",
+    });
+    // Show success message
     setSubmitted(true);
   };
 
@@ -71,7 +80,17 @@ export default function ContactSection() {
                   Thank you for reaching out. A member of our team will contact you within one business day to schedule your consultation.
                 </p>
                 <button
-                  onClick={() => setSubmitted(false)}
+                  onClick={() => {
+                    setSubmitted(false);
+                    // Ensure form is cleared when resetting
+                    setForm({
+                      name: "",
+                      email: "",
+                      company: "",
+                      service: "",
+                      message: "",
+                    });
+                  }}
                   className="mt-6 font-heading text-xs text-[#D4AF37] hover:underline"
                 >
                   Send another message

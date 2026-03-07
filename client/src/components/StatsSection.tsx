@@ -29,7 +29,7 @@ function useCountUp(target: number, duration = 2000, isVisible = false) {
 const stats = [
   { prefix: "$", value: 65, suffix: "M+", label: "Total Assets Managed", isDecimal: false },
   { prefix: "", value: 85, suffix: "+", label: "Business Clients Served", isDecimal: false },
-  { prefix: "$", value: 85, suffix: "K+", label: "Tax Savings Delivered", isDecimal: false },
+  { prefix: "$", value: 2.5, suffix: "M+", label: "Tax Savings Delivered", isDecimal: true },
   { prefix: "", value: 98, suffix: "%", label: "Client Retention Rate", isDecimal: false },
 ];
 

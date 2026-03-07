@@ -15,7 +15,7 @@ const partners = [
     credentials: "CPA, MST",
     title: "Managing Partner",
     specialty: "Tax Strategy & Business Advisory",
-    bio: "Strategic tax planning specialist with 15+ years advising high-growth businesses and entrepreneurs. Michael has helped clients collectively save over $85K in tax liability through proactive planning and deep regulatory expertise.",
+    bio: "Strategic tax planning specialist with 15+ years advising high-growth businesses and entrepreneurs. Michael has helped clients collectively save over $2.5M in tax liability through proactive planning and deep regulatory expertise.",
     photo: MICHAEL_IMG,
     highlights: ["IRS Enrolled Agent", "Big 4 Alumni", "Forbes 30 Under 30"],
   },
@@ -67,11 +67,11 @@ export default function PartnersSection() {
             >
               <div className="flex flex-col sm:flex-row">
                 {/* Portrait */}
-                <div className="relative w-full sm:w-52 h-64 sm:h-auto flex-shrink-0 overflow-hidden">
+                <div className="relative w-full sm:w-52 h-64 sm:h-full flex-shrink-0 overflow-hidden">
                   <img
                     src={partner.photo}
                     alt={partner.name}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain sm:object-cover sm:object-top group-hover:scale-105 transition-transform duration-700"
                   />
                   {/* Gold overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F1E2E]/60 to-transparent sm:bg-gradient-to-r sm:from-transparent sm:to-[#0F1E2E]/20" />
